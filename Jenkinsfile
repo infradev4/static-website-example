@@ -80,6 +80,7 @@ pipeline {
 					}
 				}
 			}
+		}
 		
 		stage('Deploy app on EC2-cloud STAGING') {
 			agent any
@@ -100,7 +101,7 @@ pipeline {
 				}
 			}
 		}
-    }
+    
     
     
     
