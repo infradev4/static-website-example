@@ -39,16 +39,7 @@ pipeline {
            }
        }
 
-       #stage ('Test container') {
-       #    agent any
-       #    steps {
-       #        script{
-       #            sh '''
-       #                curl http://localhost:80 | grep -iq "Hello world!"
-       #            '''
-       #        }
-       #    }
-       #}
+       
 
        stage ('clean env and save artifact') {
            agent any
