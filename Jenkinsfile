@@ -8,7 +8,7 @@ pipeline {
         USERNAME = "devoupssama"
         CONTAINER_NAME = " static-website-example"
         EC2_PRODUCTION_HOST = "54.242.116.111" 
-		EC2_STAGING_HOST = "35.153.226.73"
+	EC2_STAGING_HOST = "35.153.226.73"
     }
 
     agent none
@@ -31,8 +31,7 @@ pipeline {
                    sh '''
                        docker stop $CONTAINER_NAME || true
                        docker rm $CONTAINER_NAME || true
-                       #docker run --name $CONTAINER_NAME -d -e PORT=80 -p 80:80 $USERNAME/$IMAGE_NAME:$IMAGE_TAG
-					   docker run --name $CONTAINER_NAME -d -p 80:80 $USERNAME/$IMAGE_NAME:$IMAGE_TAG
+                       docker run --name $CONTAINER_NAME -d -p 80:80 $USERNAME/$IMAGE_NAME:$IMAGE_TAG
                        sleep 5
                    '''
                }
