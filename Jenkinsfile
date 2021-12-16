@@ -6,7 +6,7 @@ pipeline {
         STAGING = "oussama-ajc-staging-env"
         PRODUCTION = "oussama-ajc-prod-env"
         USERNAME = "devoupssama"
-        CONTAINER_NAME = "static-website-example"
+        CONTAINER_NAME = "webapp"
         EC2_PRODUCTION_HOST = "54.242.116.111" 
 	EC2_STAGING_HOST = "35.153.226.73"
     }
